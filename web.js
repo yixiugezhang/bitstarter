@@ -10,9 +10,8 @@ var port = process.env.PORT || 5000;
 app.listen(port, function() {
     console.log("Listening on " + port);
 });
+
 var readMessage = function() {
-    fs.readFileSync('index.html', function (err, data) {
-        if (err) throw err;
-        return data.toString();
-    });
-}   
+     var data = fs.readFileSync('index.html')
+     return data.toString();
+};
